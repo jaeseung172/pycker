@@ -23,6 +23,8 @@ RUN apk add --update \
  && pip3.6 install --upgrade pip \
  && rm /var/cache/apk/*
 
+COPY requirements.txt /requirements.txt
+
 # make us compatible with manylinux wheels and create some useful symlinks that are expected to exist
 RUN echo "manylinux1_compatible = True" > /usr/lib/python3.6/_manylinux.py \
  && cd /usr/bin \
@@ -33,5 +35,7 @@ RUN echo "manylinux1_compatible = True" > /usr/lib/python3.6/_manylinux.py \
  && ln -sf python-config3.6 python-config \
  && ln -sf pip3.6 pip \
  && ln -sf /usr/include/locale.h /usr/include/xlocale.h
+# RUN Install Script
+CMD ["pip", "install", "-r", "requirements.txt"]
 # since we will be "always" mounting the volume, we can set this up
 CMD /bin/bash
