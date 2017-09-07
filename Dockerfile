@@ -36,6 +36,7 @@ RUN echo "manylinux1_compatible = True" > /usr/lib/python3.6/_manylinux.py \
  && ln -sf pip3.6 pip \
  && ln -sf /usr/include/locale.h /usr/include/xlocale.h
 # RUN Install Script
-CMD ["pip", "install", "-r", "requirements.txt"]
+WORKDIR /
+RUN pip install -r requirements.txt
 # since we will be "always" mounting the volume, we can set this up
 CMD /bin/bash
