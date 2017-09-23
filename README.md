@@ -2,12 +2,8 @@
 
 **MAKE PYTHON GREAT AGAIN WITH DOCKER**
 
-### IMAGE SPECIFICAITON
+### Image Information
 
-- BASE: Arch Linux
+base: frolvlad/alpine-glibc
 
-	- Python: 3.6.1
-
-	- Module: See `requirements.txt` for brief information
-
-
+python: 3.6.1 with Miniconda
