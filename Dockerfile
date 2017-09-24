@@ -20,9 +20,9 @@ RUN apk add --update \
               jpeg-dev \
               && rm -rf /var/cache/apk/*
 
-RUN bash Miniconda3-latest-Linux-x86_64.sh -b -p $HOME/miniconda
+RUN bash Miniconda3-latest-Linux-x86_64.sh -b -p /miniconda
 
-ENV PATH="root/miniconda/bin:$PATH"
+ENV PATH="/miniconda/bin:$PATH"
 
 RUN pip install -r requirements.txt --no-cache-dir
 
