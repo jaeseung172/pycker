@@ -3,3 +3,11 @@ matplotlib
 scikit-learn
 pillow
 jupyter
+keras
+scipy
+numpy
+requests
+scrapy
+beautifulsoup4
+nltk
+sympy
