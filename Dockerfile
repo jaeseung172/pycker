@@ -28,4 +28,6 @@ RUN pip install -r requirements.txt --no-cache-dir
 
 RUN conda install -y ncurses
 
+RUN rm Miniconda3-latest-Linux-x86_64.sh
+
 CMD bin/bash
